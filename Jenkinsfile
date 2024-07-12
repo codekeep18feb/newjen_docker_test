@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+            PATH = "/usr/bin:/usr/local/bin:$PATH"
+        }
+        
     stages {
         stage('Checkout') {
             steps {
